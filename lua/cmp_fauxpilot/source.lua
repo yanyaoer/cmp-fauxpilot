@@ -74,7 +74,7 @@ function Source._do_complete(self, ctx, callback)
     'POST',
     '-d',
     vim.json.encode(req),
-    conf:get('host') .. '/v1/engines/codegen/completions',
+    conf:get('host') .. conf:get('endpoints') or '/v1/engines/codegen/completions',
   }, {
     on_stdout = function(_, c, _)
       local items = {}

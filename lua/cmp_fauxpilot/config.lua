@@ -3,6 +3,7 @@ local M = {}
 local conf_defaults = {
   host = 'http://localhost:5000',
   model = 'fastertransformer',
+  endpoints = '/v1/engines/codegen/completions',
   max_tokens = 16,
   temperature = 0.6,
   top_p = 1,
